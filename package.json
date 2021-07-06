@@ -2,7 +2,8 @@
   "name": "react-multy-csv-viewer",
   "version": "1.0.0",
   "description": "'component to visualize a csv file for react app'",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -29,11 +30,22 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2"
   },
+  "keywords": [
+    "react js",
+    "component",
+    "csv",
+    "antd"
+  ],
   "peerDependencies": {
     "antd": "^4.16.6",
     "papaparse": "^5.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeDalton24/react-multy-csv-viewer.git"
+  },
+  "homepage": "https://github.com/JoeDalton24/react-multy-csv-viewer/tree/master#readme"
 }
