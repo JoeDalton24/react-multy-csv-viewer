@@ -1,6 +1,6 @@
 # what is react-multy-csv-viewer??
 
-React component to visualize csv file
+React component to visualize csv files
 
 # installation
 
