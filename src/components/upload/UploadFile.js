@@ -12,12 +12,13 @@ export const UploadFile = () => {
     const { fileList } = file;
     for (let file of fileList) {
       const { originFileObj, name } = file;
-      const csvString = await readUploadedFileAsText(originFileObj);
-      const [data, colomns] = transformCsvToArray(csvString);
+      if (name.endsWith(".csv")) {
+        const csvString = await readUploadedFileAsText(originFileObj);
+        const [data, colomns] = transformCsvToArray(csvString);
 
-      fileTransformed.push({ name, data, colomns });
+        fileTransformed.push({ name, data, colomns });
+      }
     }
-    //console.log(fileTransformed);
     setFileTransformed(fileTransformed);
   };
 
@@ -70,7 +71,6 @@ export const UploadFile = () => {
           onChange={handleUploadFile}
           multiple={true}
           action={false}
-          //showUploadList={{ showRemoveIcon: false }}
           showUploadList={false}
         >
           <Button>Choose File</Button>
@@ -84,5 +84,3 @@ export const UploadFile = () => {
     </Row>
   );
 };
-
-//export default UploadFile;
